@@ -1,0 +1,2 @@
+input function >> getline(), push_back, pop_back
+capacity(), resize(), length(), 
