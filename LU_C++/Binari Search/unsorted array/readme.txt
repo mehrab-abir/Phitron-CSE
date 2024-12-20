@@ -1,0 +1,1 @@
+binary search after applying bubble sort
