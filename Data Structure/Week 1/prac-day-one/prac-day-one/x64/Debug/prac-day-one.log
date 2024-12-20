@@ -1,0 +1,7 @@
+﻿  core.cpp
+F:\Programming\Phitron\S2\Data Structure\Week 1\prac-day-one\core.cpp(135,11): warning C4566: character represented by universal-character-name '\u09AF' cannot be represented in the current code page (1252)
+F:\Programming\Phitron\S2\Data Structure\Week 1\prac-day-one\core.cpp(135,11): warning C4566: character represented by universal-character-name '\u09CB' cannot be represented in the current code page (1252)
+F:\Programming\Phitron\S2\Data Structure\Week 1\prac-day-one\core.cpp(135,11): warning C4566: character represented by universal-character-name '\u0997' cannot be represented in the current code page (1252)
+F:\Programming\Phitron\S2\Data Structure\Week 1\prac-day-one\core.cpp(135,11): warning C4566: character represented by universal-character-name '\u09AB' cannot be represented in the current code page (1252)
+F:\Programming\Phitron\S2\Data Structure\Week 1\prac-day-one\core.cpp(135,11): warning C4566: character represented by universal-character-name '\u09B2' cannot be represented in the current code page (1252)
+  prac-day-one.vcxproj -> F:\Programming\Phitron\S2\Data Structure\Week 1\prac-day-one\x64\Debug\prac-day-one.exe
