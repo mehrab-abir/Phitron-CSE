@@ -16,7 +16,9 @@ public:
 
 void insert_at_head(Node*& head, int value) { //look, head akta pointer, r akhane head er reference ante hoise, karon head change hobe, jeta main function a o howa lagbe
 
-	Node* newnode = new Node(value); //at first, newnode create korte hobe 
+	Node* newnode = new Node(value); //at first, newnode create korte hobe
+
+	//newnode er 'next' a akhon NULL ache, constructor er karone, ata update kore head ke rakhte hobe
 
 	newnode->next = head; //newnode er 'next' a head ke rekhe dilam, mane, new node er 'next' a head er address ache, karon head to nijei tar node er address carry korteche, jehetu dynamically neya hoise
 	head = newnode; //head ke new node a niye gelam
