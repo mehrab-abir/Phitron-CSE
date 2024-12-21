@@ -14,7 +14,7 @@ public:
 	}
 };
 
-void insert_at_any_position(Node* head, int index, int value) {
+void insert_at_any_position(Node* &head, int index, int value) {
 	Node* newnode = new Node(value);
 
 	Node* temp = head;
