@@ -16,14 +16,24 @@ public:
 
 void insert_at_head(Node*& head, int value) { //look, head akta pointer, r akhane head er reference ante hoise, karon head change hobe, jeta main function a o howa lagbe
 
-	Node* newnode = new Node(value); //at first, newnode create korte hobe
+	Node* newnode = new Node(value); //at first, newnode create korte hobe 
 
 	//newnode er 'next' a akhon NULL ache, constructor er karone, ata update kore head ke rakhte hobe
 
 	newnode->next = head; //newnode er 'next' a head ke rekhe dilam, mane, new node er 'next' a head er address ache, karon head to nijei tar node er address carry korteche, jehetu dynamically neya hoise
 	head = newnode; //head ke new node a niye gelam
-	//head akhon newnode ke point korteche
 
+}
+
+void print_linked_list(Node* head) {
+	Node* temp = head;
+
+	int i = 1;
+	while (temp != NULL) {
+		cout << "Node " << i << ": " << temp->value << endl;
+		temp = temp->next;
+		i++;
+	}
 }
 
 int main() {
@@ -42,9 +52,15 @@ int main() {
 
 	insert_at_head(head, 50);
 
-	cout << "After inserting 50 at head, head er value: " << head->value << endl;
-	cout << "Tar porer gula: " << endl;
-	cout << head->next->value <<" " << head->next->next->value << " "<< head->next->next->next->value;
+	cout << "After inserting 50 at head:" << endl;
+	print_linked_list(head);
 
+	cout << endl<<endl;
+
+	insert_at_head(head, 70);
+	cout << "After inserting 70 at head:" << endl;
+	print_linked_list(head);
+
+	cout << endl;
 	return 0;
 }
