@@ -22,6 +22,7 @@ void insert_at_head(Node*& head, int value) { //look, head akta pointer, r akhan
 
 	newnode->next = head; //newnode er 'next' a head ke rekhe dilam, mane, new node er 'next' a head er address ache, karon head to nijei tar node er address carry korteche, jehetu dynamically neya hoise
 	head = newnode; //head ke new node a niye gelam
+	//head akhon newnode ke point korteche
 
 }
 
