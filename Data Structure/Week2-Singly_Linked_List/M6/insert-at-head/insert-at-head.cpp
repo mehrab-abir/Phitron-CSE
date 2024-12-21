@@ -46,9 +46,7 @@ int main() {
 	a->next = b;
 
 	cout << "Insert at head er age: " << endl;
-	cout << "Head: " << head->value << endl;
-	cout << "a: " << head->next->value << endl;
-	cout << "b: " << head->next->next->value << endl;
+	print_linked_list(head);
 
 	insert_at_head(head, 50);
 
