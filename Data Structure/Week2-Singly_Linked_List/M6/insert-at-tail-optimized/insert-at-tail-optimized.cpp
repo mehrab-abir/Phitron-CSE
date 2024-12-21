@@ -15,7 +15,7 @@ public:
 };
 
 //Time complexity O(1)
-void insert_at_tail(Node* head, Node* &tail, int value) {
+void insert_at_tail(Node* &head, Node* &tail, int value) {
 	Node* newnode = new Node(value);
 
 
