@@ -1,1 +1,5 @@
-
+Insert at head
+Insert at tail
+Insert at any given position
+Linked list length
+Reverse print
