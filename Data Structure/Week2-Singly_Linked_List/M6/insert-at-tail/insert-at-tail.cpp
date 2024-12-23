@@ -14,11 +14,11 @@ public:
 	}
 };
 
-void insert_at_tail(Node* &head,int value) {
+void insert_at_tail(Node* &head,Node* &tail, int value) {
 	Node* newnode = new Node(value);
 
 	//corner case
-	if (head == NULL) { //'head' null thakle newnode ke just head a rekhe dite hobe
+	if (head == NULL) { //'head' null thakle (List empty) newnode e hobe head and tail
 		head = newnode;
 		tail = newnode;
 		return; //return na korle porer line gula execute hoye jabe
@@ -60,22 +60,22 @@ int main() {
 
 	Node* head = new Node(10);
 	Node* a = new Node(20);
-	Node* b = new Node(30);
+	Node* tail = new Node(30);
 
 	head->next = a;
-	a->next = b;
+	a->next = tail;
 
 	cout << "Insert at tail er age: " << endl;
 	print_linked_list(head);
 
-	insert_at_tail(head, 50);
+	insert_at_tail(head, tail, 50);
 
 	cout << "After inserting 50 at tail:" << endl;
 	print_linked_list(head);
 
 	cout << endl << endl;
 
-	insert_at_tail(head, 70);
+	insert_at_tail(head, tail, 70);
 	cout << "After inserting 70 at tail:" << endl;
 	print_linked_list(head);
 
