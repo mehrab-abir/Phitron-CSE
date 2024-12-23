@@ -20,6 +20,7 @@ void insert_at_tail(Node* &head,int value) {
 	//corner case
 	if (head == NULL) { //'head' null thakle newnode ke just head a rekhe dite hobe
 		head = newnode;
+		tail = newnode;
 		return; //return na korle porer line gula execute hoye jabe
 	}
 
