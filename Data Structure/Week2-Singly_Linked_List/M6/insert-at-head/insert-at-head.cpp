@@ -22,6 +22,7 @@ void insert_at_head(Node*& head, Node*& tail, int value) { //look, head akta poi
 	if(head == NULL){
 		head = newnode;
 		tail = newnode;
+		return;
 	}
 
 	//newnode er 'next' a akhon NULL ache, constructor er karone, ata update kore head ke rakhte hobe
