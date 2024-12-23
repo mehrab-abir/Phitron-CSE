@@ -13,6 +13,12 @@ Node::Node(int value) {
 void insert_at_head(Node*& head, Node*& tail, int value) {
 	Node* newnode = new Node(value);
 
+	if(head == NULL){
+		head = newnode;
+		tail = newnode;
+		return;
+	}
+
 	newnode->next = head;
 	head = newnode;
 }
