@@ -14,9 +14,15 @@ public:
 	}
 };
 
-void insert_at_head(Node*& head, int value) { //look, head akta pointer, r akhane head er reference ante hoise, karon head change hobe, jeta main function a o howa lagbe
+void insert_at_head(Node*& head, Node*& tail, int value) { //look, head akta pointer, r akhane head er reference ante hoise, karon head change hobe, jeta main function a o howa lagbe
 
 	Node* newnode = new Node(value); //at first, newnode create korte hobe 
+
+	//corner case
+	if(head == NULL){
+		head = newnode;
+		tail = newnode;
+	}
 
 	//newnode er 'next' a akhon NULL ache, constructor er karone, ata update kore head ke rakhte hobe
 
@@ -40,22 +46,23 @@ int main() {
 
 	Node* head = new Node(10);
 	Node* a = new Node(20);
-	Node* b = new Node(30);
+	Node* tail = new Node(30);
 
 	head->next = a;
-	a->next = b;
+	a->next = tail;
+	//tail er 'next' a to NULL achei already
 
 	cout << "Insert at head er age: " << endl;
 	print_linked_list(head);
 
-	insert_at_head(head, 50);
+	insert_at_head(head, tail, 50);
 
 	cout << "After inserting 50 at head:" << endl;
 	print_linked_list(head);
 
 	cout << endl<<endl;
 
-	insert_at_head(head, 70);
+	insert_at_head(head, tail, 70);
 	cout << "After inserting 70 at head:" << endl;
 	print_linked_list(head);
 
