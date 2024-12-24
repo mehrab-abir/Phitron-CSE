@@ -42,7 +42,7 @@ void print_linked_list(Node* head) {
 }
 
 //delete head
-void delete_head(Node*& head) {
+void delete_head(Node*& head, Node* &tail) {
 	Node* deleteNode = head;
 
 	if (head == NULL) {
@@ -53,6 +53,13 @@ void delete_head(Node*& head) {
 	//head null na thakle
 	head = head->next;
 	delete deleteNode;
+
+	/*Corner case--- if there was only one node, then it was both head and tail, in that case, after deleting
+	that head node, head and tail both have to be NULL*/
+	if (head == NULL) {
+		tail = NULL;
+		return;
+	}
 }
 
 int main() {
@@ -75,7 +82,7 @@ int main() {
 	cout << "\nBefore deleting head: ";
 	print_linked_list(head);
 	
-	delete_head(head);
+	delete_head(head, tail);
 	cout << "\nAfter deleting head: ";
 	print_linked_list(head);
 
