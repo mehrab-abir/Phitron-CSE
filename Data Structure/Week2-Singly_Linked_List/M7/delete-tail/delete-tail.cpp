@@ -55,6 +55,12 @@ int list_length(Node* head) {
 
 //delete from any position
 void delete_tail(Node*& head, Node* &tail, int lastNode) {
+    	//if list is already empty
+	    if(head == NULL){
+	        cout<<"List is already empty. Nothing to delete"<<endl;
+	        return;
+	}
+
 	Node* temp = head;
 
 	/*length er soman index manei delete tail, jehetu 0 based indexing onujayi tail delete hoy, tai length
@@ -70,11 +76,21 @@ void delete_tail(Node*& head, Node* &tail, int lastNode) {
 	//tar mane, temp er 'next' a last(tail) node er address ache, jeta delete korte chacchi
 
 	Node* deleteNode = temp->next; //deleteNode er moddhe last node rekhe dilam
-	temp->next = temp->next->next; 
+	temp->next = temp->next->next;
 	/*temp er 'next' update kore tail(last node) er node er porer node rekhe dilam, akhne seta hocche NULL
 	node, tar mane akhon temp er next a null ache*/
 
 	delete deleteNode; // tarpor tail er node delete kore dilam
+
+	// corner case
+    	/*1 ta matro node thakar karone tail NULL a chole jay, similarly head o NULL howa lagbe, jehetu oi akta
+    	node delete korar por list empty hoye jabe*/
+    	if(tail == NULL){
+        	head = NULL;
+        	return; //akhan thekei return hoye jabe
+    	}
+
+	//1 tar beshi node thakle tail, tail er jaygay thakbe
 	tail = temp; /*karon temp akhon ager last node er tik age chilo, tail delete korar por jeta akhon last
 	node hoye gese*/
 }
@@ -83,7 +99,6 @@ int main() {
 
 	Node* head = NULL;
 	Node* tail = NULL;
-
 	cout << "Create Linked List >>>>" << endl;
 
 	while (true) {
@@ -96,6 +111,7 @@ int main() {
 		}
 		insert_at_tail(head, tail, value);
 	}
+	
 	cout << "\nBefore deleting: ";
 	print_linked_list(head);
 
