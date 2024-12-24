@@ -83,7 +83,7 @@ void delete_tail(Node*& head, Node* &tail, int lastNode) {
 	delete deleteNode; // tarpor tail er node delete kore dilam
 
 	// corner case
-    	/*1 ta matro node thakar karone tail NULL a chole jay, similarly head o NULL howa lagbe, jehetu oi akta
+    	/*1 ta matro node thakle tail NULL a chole jay, similarly head o NULL howa lagbe, jehetu oi akta
     	node delete korar por list empty hoye jabe*/
     	if(tail == NULL){
         	head = NULL;
