@@ -64,14 +64,14 @@ int main() {
 	b->next = tail;
 	tail->prev = b;
 
-	cout << "Before inserting at head: ";
+	cout << "Before inserting at tail: ";
 	print_forward(head);
 
 	cout << "After inserting at tail: ";
 	insert_at_tail(head, tail, 100);
 	print_forward(head);
 
-	cout << "After inserting at head again: ";
+	cout << "After inserting at tail again: ";
 	insert_at_tail(head, tail, 200);
 	print_forward(head);
 
