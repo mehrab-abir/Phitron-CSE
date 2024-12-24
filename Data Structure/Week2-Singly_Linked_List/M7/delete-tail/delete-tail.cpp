@@ -56,7 +56,7 @@ int list_length(Node* head) {
 //delete from any position
 void delete_tail(Node*& head, Node* &tail, int lastNode) {
     	//if list is already empty
-	    if(head == NULL){
+	if(head == NULL){
 	        cout<<"List is already empty. Nothing to delete"<<endl;
 	        return;
 	}
